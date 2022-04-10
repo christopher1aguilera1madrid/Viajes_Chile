@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark mainnavbar">
+  <nav class="navbar navbar-expand-lg navbar-dark mainnavbar fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html"><img src="assets/img/viajes.svg" alt="...">Viajes Chile</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +36,7 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-none d-md-block">
             <a class="nav-link" href="#somos">Quienes Somos</a>
           </li>
           <li class="nav-item">
@@ -76,8 +76,7 @@
 
 
 
-<!-- somos desaparece en mobil -->
-<section id="somos" class="somos">
+<section id="somos" class="somos d-none d-md-block">
   <div class="titulo">
     <div class="row">
       <h2 class="col-12">¿Quiénes somos?</h2>
@@ -90,7 +89,7 @@
     <div class="row">
       <!-- <h2 class="col-12">¿Quiénes somos?</h2> -->
       <!-- <span class="border-bottom col-12"></span> -->
-      <div class="texto-columna col-sm-12 col-md-4">
+      <div class="texto-columna col-md-12 col-lg-4">
         <div class="columa-icono col-12">
           <i class="fa fa-plane" aria-hidden="true"></i>
         </div>
@@ -107,7 +106,7 @@
               </p>
         </div>
       </div>
-      <div class="texto-columna col-sm-12 col-md-4">
+      <div class="texto-columna col-md-12 col-lg-4">
         <div class="columa-texto col-12">
           <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, 
@@ -124,7 +123,7 @@
           <a href="..." target="_blank"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
         </div>
       </div>
-      <div class="texto-columna col-sm-12 col-md-4">
+      <div class="texto-columna col-md-12 col-lg-4">
         <div class="columa-icono col-12">
           <a href="..." target="_blank"><i class='fas fa-route'></i></a>
         </div>
@@ -162,44 +161,52 @@
           <div class="card">
             <img src="assets/img/card1.jpg" class="card-img-top" alt="...">
             <div class="card-body bg-info">
+                <h5 class="card-title  mostrar-tarjeta">Montaña</h5>
               <p class="card-text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repellat dolores voluptatem minima nobis? 
-                Pariatur assumenda commodi labore culpa? Incidunt ipsa alias tempora voluptatem temporibus unde quae omnis! Quaerat, facilis!
+                Pariatur assumenda commodi labore culpa? Incidunt ipsa alias tempora voluptatem temporibus unde quae omnis! Quaerat.
               </p>
             </div>
+            <button type="button" class="btn" data-toggle="modal" data-target="#carta1">Ver mas...</button>
           </div>
         </div>
         <div class="col-md-12 col-lg-3">
           <div class="card">
             <img src="assets/img/card2.jpg" class="card-img-top" alt="...">
             <div class="card-body bg-info">
+              <h5 class="card-title  mostrar-tarjeta">Lago</h5>
               <p class="card-text">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis molestiae quia possimus distinctio ut, 
                 iure voluptates culpa iste magnam impedit nisi porro ipsa asperiores blanditiis labore unde alias sit laborum.
               </p>
             </div>
+            <button type="button" class="btn" data-toggle="modal" data-target="#carta2">Ver mas...</button>
           </div>
         </div>
         <div class="col-md-12 col-lg-3">
           <div class="card">
             <img src="assets/img/card3.jpg" class="card-img-top" alt="...">
             <div class="card-body bg-info">
+              <h5 class="card-title  mostrar-tarjeta">Desierto</h5>
               <p class="card-text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. At commodi quaerat explicabo consequatur natus perferendis, 
-                saepe voluptates iure error. Mollitia aspernatur fugit doloremque, provident eveniet quasi voluptate esse quis asperiores?
+                saepe voluptates iure error. Mollitia aspernatur fugit doloremque, provident eveniet quasi voluptate esse quis.
               </p>
             </div>
+            <button type="button" class="btn" data-toggle="modal" data-target="#carta3">Ver mas...</button>
           </div>
         </div>
         <div class="col-md-12 col-lg-3">
           <div class="card">
             <img src="assets/img/card4.jpg" class="card-img-top" alt="...">
             <div class="card-body bg-info">
+              <h5 class="card-title  mostrar-tarjeta">Bosque</h5>
               <p class="card-text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ratione debitis praesentium nam dolor adipisci sunt, eum ipsa fugiat laudantium sint, 
                 cumque natus ut. Dolore impedit possimus in culpa tempore!
               </p>
             </div>
+            <button type="button" class="btn" data-toggle="modal" data-target="#carta4">Ver mas...</button>
           </div>
         </div>
       </div>
@@ -227,20 +234,25 @@
         <form class="col-12">
           <div class="form-group col-12">
             <label>Nombre</label>
-            <input class="col-12">
+            <input id="nombre" type="text" class="col-12" required>
           </div>
           <div class="form-group col-12">
             <label>Asunto</label>
-            <input class="col-12">
+            <input id="asunto" type="text" class="col-12" required>
           </div>
           <div class="form-group col-12">
             <label>Mensaje</label>
-            <input class="col-12">
+            <textarea id="mensaje" type="text" rows="10" cols="40" class="mensaje col-12" required></textarea>
           </div>
           <div class="form-group col-12">
-          <button type="submit" class="enviar btn btn-info">Enviar</button>
+              <input id="enviarCorreo" class="enviar btn btn-info" data-toggle="tooltip" data-placement="right" title="Presiona para enviar a tu correo" type="submit">
         </div>
         </form>
+
+
+
+
+
       </div>
   </div>
 </section>
@@ -248,7 +260,7 @@
   <div class="container">
     <div class="row">
       <div class="footer-texto col-6">
-        <p>Viajes Chile</p>
+        <h3 class="cambiar">VIAJES CHILE</h3>
       </div>
       <div class="footer-iconos col-6">
             <button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="github.com"><a href="https://github.com"  target="_blank"><i class="fab fa-github-square fa-3x text-light"></i></a></button>
@@ -260,10 +272,178 @@
   </div>
   <!-- arregalr tamaño pantalla -->
 </footer>
+
+
+
+<div class="cartas">
+  <!--cartas abiertas-->
+  <!--carta 1 abierta-->
+  <div class="modal fade" id="carta1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Montañas</h5><!--titulo de la carta-->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"><!--contenido de la carta-->
+          <img class="img-fluid mb-3" src="assets/img/card1.jpg" alt="Card image cap">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn"><a href="#" target="_blank">Montañas</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--carta 2 abierta-->
+  <div class="modal fade" id="carta2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Lago</h5><!--titulo de la carta-->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"><!--contenido de la carta-->
+          <img class="img-fluid mb-3" src="assets/img/card2.jpg" alt="Card image cap">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn"><a href="#" target="_blank">Lago</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--carta 3 abierta-->
+  <div class="modal fade" id="carta3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Desierto</h5><!--titulo de la carta-->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"><!--contenido de la carta-->
+          <img class="img-fluid mb-3" src="assets/img/card3.jpg" alt="Card image cap">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn"><a href="#" target="_blank">Desierto</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="carta4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Bosque</h5><!--titulo de la carta-->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"><!--contenido de la carta-->
+          <img class="img-fluid mb-3" src="assets/img/card4.jpg" alt="Card image cap">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn"><a href="#" target="_blank">Bosque</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <script type="text/javascript">
+
+//tooltip de bootstrap
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+
+
+//carrusel de bootstrap
   $(document).ready(function() {
-    $('.carousel').carousel({interval: 7000});
+    $('.carousel').carousel({interval: 5000});
   });
+
+// modal de bootstrap
+$(document).ready(function(){
+  $('[data-target="#carta1"]').click(function(){
+    $('#carta1').modal({
+      backdrop: false
+    })
+  });
+  $('[data-target="#carta2"]').click(function(){
+    $('#carta2').modal({
+      backdrop: false
+    })
+  });
+  $('[data-target="#carta3"]').click(function(){
+    $('#carta3').modal({
+      backdrop: false
+    })
+  });
+  $('[data-target="#carta4"]').click(function(){
+    $('#carta4').modal({
+      backdrop: false
+    })
+  });
+});
+
+// cambair de color viajes chile del footer
+  $(document).ready(function(){
+    etiqueta = $(".cambiar")
+    footer = $("footer")
+    etiqueta = etiqueta[0]
+      $(etiqueta).on("dblclick", function(){
+        var elementStyle = window.getComputedStyle(etiqueta);
+        var elementColor = elementStyle.getPropertyValue('color');
+        if(elementColor == "rgb(255, 255, 255)" || elementColor == "rgb(0, 0, 0)"){
+          $(etiqueta).css("color", "red");
+          elementStyle = window.getComputedStyle(etiqueta);
+          elementColor = elementStyle.getPropertyValue('color');
+        }
+        else if(elementColor == "rgb(255, 0, 0)"){
+          $(etiqueta).css("color", "white");
+          elementStyle = window.getComputedStyle(etiqueta);
+          elementColor = elementStyle.getPropertyValue('color');
+        }
+      });
+  });
+
+// mostrar contenido tarjetas
+$(document).ready(function(){
+  $(".mostrar-tarjeta").click(function(){
+    $(this).next("p").toggle();
+  });
+});
+
+// alerta de envio de correo
+$(document).ready(function(){
+  document.getElementById("contacto").addEventListener('submit', validarFormulario); 
+});
+
+function validarFormulario(evento) {
+    evento.preventDefault();
+    alert("El correo fue enviado correctamente...")
+    location.reload();
+  }
 </script>
 </body>
 </html>
+
+<!-- arreglar detalles tamaño(letras, iconos y contenido) -->
+<!-- comunetar las cosas -->
+<!-- ordenar codigo -->
+<!-- Google Fonts -->
