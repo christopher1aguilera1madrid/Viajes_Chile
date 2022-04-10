@@ -63,12 +63,36 @@ nav{
 .columa-icono{
     margin: auto;
     text-align: center;
+    background-color: aqua;
+}
+
+.texto-columna{
+    margin-bottom: 40px;
+}
+.columa-texto{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 .destacados{
 
 }
+.card{
+    margin-bottom: 20px;
+    height: 510px;
+}
+.card img{
+    height: 150px;
+}
+.card-text{
+    /* height: 230px; */
+}
 .contacto{
 
+}
+footer{
+    background-color: aqua;
 }
 .footer-texto{
     margin: auto;
@@ -122,17 +146,24 @@ opacity: 1 !important;
 .espacio{
     height: 300px;
 }
+.espacio{
+    height: 500px;
+}
 
-
-@media (max-width: 550px) {
-    .espacio{
-        height: 500px;
+@media (max-width: 991px) {
+    .card{
+        margin-bottom: 20px;
+        height: 300px;
     }
 }
 
-@media (min-width: 550px) {
-    .espacio{
-        height: 500px;
+@media (min-width: 1200px) {
+    .card{
+        margin-bottom: 20px;
+        height: 430px;
     }
 }
 
+.border-bottom {
+    border-top: 2px solid black;
+}
