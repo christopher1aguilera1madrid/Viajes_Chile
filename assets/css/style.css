@@ -1,30 +1,22 @@
-/* html {
-    scroll-behavior: smooth;
-  } */
-body{
+body {
     background-color: black;
     color: white;
     margin: 0;
     padding: 0;
-    /* max-width: 1000px; */
+    font-family: 'Cabin', sans-serif;
 }
-a{
-    color: white;
-}
-h2{
-    text-align: center;
-}
-.mensaje{
-    margin: 0;
-    /* height: 200px; */
-}
-.carrusel{
+
+/* activar si no quiere usar navbar fixed-top */
+/* .carrusel {
 width: 100%;
 float: left;
 margin: 0;
 padding: 0;
-}
-#carouselExampleControls{
+z-index: -99;
+} */
+
+/* utiliza todo el ancho de la pagina y sobre posicionar del navbar sin el fixed-top*/
+#carouselExampleControls {
     position: absolute;
     z-index:1;
     width: 100%;
@@ -32,16 +24,18 @@ padding: 0;
     margin: 0;
     padding: 0;
     top: 0px;
+}
 
+.carousel .carousel-item {
+    width: 100%;
 }
-.carousel-item img{
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    /* height: 300px; */
+    
+.carousel .active {
+    opacity: 1 !important;
 }
-nav{
-    /* float: left; */
+
+/* sobre posicionar del carrusel sin el fixed-top */
+nav {
     height: 0;
     position: absolute;
     top: 0;
@@ -50,146 +44,166 @@ nav{
     padding: 0;
     z-index:2;
 }
-.navbar-collapse{
+.navbar-collapse {
     text-align: center;
     margin: auto;
     padding: auto;
     z-index:2;
 }
 
-.nav-item{
+.nav-item {
     margin:auto;
 }
-.navbar-brand img{
-    width: 30px;
-}
-/* .somos{
-    margin-top: 320px;
-} */
-.espacio{
-    height: 1000px;
-}
-.columa-icono{
+
+.columa-icono {
+    font-size: 20px;
     margin: auto;
     text-align: center;
     background-color: aqua;
 }
 
-.texto-columna{
-    margin-bottom: 40px;
-}
-.columa-texto{
+.columa-texto {
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
 }
-.destacados{
 
-}
-.card{
+.card {
     margin-bottom: 20px;
-    /* height: 510px; */
 }
-.card img{
-    height: 150px;
-}
-/* .card-text{
-    height: 250px;
-} */
-.contacto{
 
-}
-footer{
+footer {
     background-color: aqua;
 }
-.footer-texto{
+
+.footer-texto {
     margin: auto;
 }
-.footer-iconos{
+
+.footer-iconos {
     margin: auto;
     text-align: center;
 }
-
-.footer-texto h3{
-text-align: center;
-margin: auto;
-}
-.carousel { z-index: -99; } 
-.carousel .carousel-item {
-width: 100%;
-}
-/* .carousel .one {
-background: url(../img/carousel1.jpg);
-height: 500px;
-width: 100%;
-background-repeat: no-repeat;
-background-size: 100%, 500px;
-position: relative;
-}
-.carousel .two {
-background: url(../img/carousel2.jpg);
-height: 500px;
-
-background-repeat: no-repeat;
-background-size: contain, cover;;
-position: relative;
-}
-.carousel .three {
-background: url(../img/carousel3.jpg);
-height: 500px;
-
-background-repeat: no-repeat;
-background-size: contain, cover;;
-position: relative;
-} */
-
-.carousel .active {
-opacity: 1 !important;
-}
-
-.carousel-item img{
-    height: 500px;
-}
-
-.espacio{
+.card-text{
     height: 300px;
-}
-.espacio{
-    height: 500px;
+    display: none;
 }
 
+.titulo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.somos .titulo h2 {
+    margin-bottom: 0;
+}
+.destacados .titulo h2 {
+    margin-top: 10px;
+}
+
+.border-bottom {
+    border-top: 2px solid black;
+}
+.espacio {
+    height: 500px;
+}
+.somos .border-top {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* se activa en pantallas pequeñas */
 @media (max-width: 991px) {
-    .card{
-        margin-bottom: 20px;
-        /* height: 320px; */
-    }
     .card-text{
-        height: 120px;
+        height: 150px;
         display: none;
     }
+    .destacados .titulo h2 {
+        margin-top: 0;
+    }
 }
 
-@media (min-width: 1200px) {
-    .card{
-        margin-bottom: 20px;
-        /* height: 430px; */
+@media (max-width: 400px) {
+    .card-text{
+        height: 200px;
+        display: none;
     }
+    .destacados .titulo h2 {
+        margin-top: 0;
+    }
+}
+
+/* se activa en pantallas grandes */
+@media (min-width: 1200px) {
     .card-text{
         height: 250px;
     }
 
 }
 
-.border-bottom {
-    border-top: 2px solid black;
-}
-
-.titulo{
-    margin-top: 20px;
+.titulo h2 {
     margin-bottom: 20px;
 }
 
-.titulo h2{
-    margin-bottom: 20px;
+.footer-texto h3 {
+    text-align: center;
+    margin: auto;
+}
+
+a {
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    font-size: 29px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.card p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.navbar-brand {
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.nav-link {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-item img {
+    height: 500px;
+}
+
+.card img {
+    height: 150px;
+}
+
+.navbar-brand img {
+    width: 30px;
 }
