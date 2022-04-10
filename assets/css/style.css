@@ -1,0 +1,71 @@
+body{
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: white;
+}
+h2{
+    text-align: center;
+}
+.carrusel{
+width: 100%;
+float: left;
+margin: 0;
+padding: 0;
+height: 230px;
+}
+#carouselExampleControls{
+    position: absolute;
+    z-index:1;
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    top: 0px;
+
+}
+.carousel-item img{
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 300px;
+}
+nav{
+    position: absolute;
+    top: -30px;
+    margin: 0;
+    padding: 0;
+    z-index:2;
+}
+.navbar-brand img{
+    width: 30px;
+}
+.somos{
+    
+}
+.columa-icono{
+    margin: auto;
+    text-align: center;
+}
+.destacados{
+
+}
+.contacto{
+
+}
+.footer-texto{
+    margin: auto;
+}
+.footer-iconos{
+    margin: auto;
+    text-align: center;
+}
+
+.footer-texto p{
+text-align: center;
+margin: auto;
+}
+

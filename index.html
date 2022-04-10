@@ -25,7 +25,33 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header>
+
+  <nav class="navbar navbar-expand-lg mainnavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="assets/img/viajes.svg" alt="...">Viajes Chile</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#somos">Quienes Somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#destacados">Destacados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+<section class="carrusel">
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -47,42 +73,22 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-</header>
-  <nav class="navbar navbar-expand-lg mainnavbar">
-    <div class="container">
-      <a class="navbar-brand" href="index.html"><i class="fab fa-cc-diners-club fa-4x"></i>Viajes Chile</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#somos">Quienes Somos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#destacados">Destacados</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contacto">Contacto</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-</nav>
+</section>
+
+
+
+
 <!-- somos desaparece en mobil -->
 <section class="somos">
   <div class="container">
     <div class="row">
       <h2 class="col-12">¿Quiénes somos?</h2>
       <span></span>
-      <div class="texto-columna1 col-4">
-        <div class="columa1-icono">
-          <a href=".." target="_blank"><i class="..."></i></a>
+      <div class="texto-columna col-4">
+        <div class="columa-icono col-12">
+          <a href=".." target="_blank"><i class="fa fa-plane" aria-hidden="true"></i></a>
         </div>
-        <div class="columa1-texto">
+        <div class="columa-texto col-12">
           <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, 
         aut cum eveniet excepturi doloribus velit. Eaque officia quo aperiam officiis, 
@@ -90,23 +96,23 @@
           </p>
         </div>
       </div>
-      <div class="texto-columna2 col-4">
-        <div class="columa-texto">
+      <div class="texto-columna col-4">
+        <div class="columa-texto col-12">
           <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, 
         aut cum eveniet excepturi doloribus velit. Eaque officia quo aperiam officiis, 
         vel pariatur quidem. Tenetur repudiandae soluta id eveniet ipsam cumque?
           </p>
         </div>
-        <div class="columa-icono">
-          <a href="..." target="_blank"><i class="..."></i></a>
+        <div class="columa-icono col-12">
+          <a href="..." target="_blank"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></a>
         </div>
       </div>
-      <div class="texto-columna3 col-4">
-        <div class="columa3-icono">
-          <a href="..." target="_blank"><i class="..."></i></a>
+      <div class="texto-columna col-4">
+        <div class="columa-icono col-12">
+          <a href="..." target="_blank"><i class='fas fa-route'></i></a>
         </div>
-        <div class="columa3-texto">
+        <div class="columa-texto col-12">
           <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, 
         aut cum eveniet excepturi doloribus velit. Eaque officia quo aperiam officiis, 
@@ -126,7 +132,7 @@
         <div class="col mb-3">
           <div class="card">
             <img src="assets/img/card1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body bg-dark">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
           </div>
@@ -134,7 +140,7 @@
         <div class="col mb-3">
           <div class="card">
             <img src="assets/img/card2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body bg-dark">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
           </div>
@@ -142,7 +148,7 @@
         <div class="col mb-3">
           <div class="card">
             <img src="assets/img/card3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body bg-dark">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
           </div>
@@ -150,7 +156,7 @@
         <div class="col mb-3">
           <div class="card">
             <img src="assets/img/card4.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body bg-dark">
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
           </div>
@@ -177,7 +183,9 @@
             <label>Mensaje</label>
             <input class="col-12">
           </div>
+          <div class="form-group col-12">
           <button type="submit" class="enviar btn btn-light">Enviar</button>
+        </div>
         </form>
       </div>
   </div>
@@ -185,26 +193,19 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="footer-texto col-sm-3 col-md-6 col-lg-4">
+      <div class="footer-texto col-6">
         <p>Viajes Chile</p>
       </div>
-      <div class="footer-iconos col-sm-3 col-md-6 col-lg-6">
-        <div class="mastercad col-3">
-          <a href=".." target="_blank"><i class=".."></i></a>
-        </div>
-        <div class="visa col-3">
-          <a href=".." target="_blank"><i class=".."></i></a>
-        </div>
-        <div class="americanexpress col-3">
-          <a href=".." target="_blank"><i class=".."></i></a>
-        </div>
-        <div class="diners-club col-3">
-          <a href="..." target="_blank"><i class=".."></i></a>
-        </div>
+      <div class="footer-iconos col-6">
+            <button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="github.com"><a href="https://github.com"  target="_blank"><i class="fab fa-github-square fa-3x text-light"></i></a></button>
+            <button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="linkedin.com"><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin fa-3x text-light"></i></a></button>
+            <button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="twitter.com"><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square fa-3x text-light"></i></a></button>
+            <button type="button" class="btn" data-toggle="tooltip" data-placement="top" title="facebook.com"><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square fa-3x text-light"></i></a></button>
       </div>
     </div>
   </div>
   <!-- arregalr tamaño pantalla -->
 </footer>
+
 </body>
 </html>
