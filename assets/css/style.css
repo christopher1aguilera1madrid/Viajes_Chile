@@ -113,6 +113,10 @@ footer {
 section{
     margin-bottom: 30px;
 }
+/* se añade porque github no detecta el amrgin de section */
+#destacados{
+    margin-top: 30px;
+}
 /* se activa en pantallas pequeñas */
 @media (max-width: 991px) {
     .card-text{
