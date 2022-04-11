@@ -101,17 +101,18 @@ footer {
     margin-top: 10px;
 }
 
-.border-bottom {
-    border-top: 2px solid black;
-}
 .espacio {
-    height: 500px;
+    height: 470px;
 }
-.somos .border-top {
+.border-top {
     margin-top: 20px;
     margin-bottom: 20px;
+    border-top: 2px solid black;
 }
 
+section{
+    margin-bottom: 30px;
+}
 /* se activa en pantallas pequeñas */
 @media (max-width: 991px) {
     .card-text{
